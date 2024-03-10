@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate account
+    </title>
+</head>
+Open your console log
+
+<body>
+    <script>
+        const isValidString = (str) => {
+            const regularExpress = /^[_a-z0-9]{6,}$/;
+            return regularExpress.test(str)
+        }
+        const printResult = (str) => {
+            isValidString(str) ? console.log(str + ' is valid') : console.log(str + ' isn\'t valid');
+        }
+        printResult('123abc_');
+        printResult('_abc123');
+        printResult('______');
+        printResult('123456');
+        printResult('abcdefg');
+
+        printResult('.@');
+        printResult('12345');
+        printResult('1234_');
+        printResult('abcde');
+    </script>
+</body>
+
+</html>
